@@ -2,4 +2,10 @@ cookies-www.kooapp.com.pkl
 .idea
 Streamlit
 chromedriver.exe
+#dob_CI_22.csv
+#dob_checker.csv
+msedgedriver.exe
+usn.csv
+__pycache__
+
 
