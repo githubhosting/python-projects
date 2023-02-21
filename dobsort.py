@@ -8,7 +8,7 @@ T_URL = "https://parents.msrit.edu"
 browser = webdriver.Chrome(executable_path=B_URL)
 browser.get(T_URL)
 
-df = pd.read_excel("checkdob.xlsx")
+df = pd.read_excel("verifydob.xlsx")
 
 df['Date'] = pd.to_datetime(df['DOB']).dt.date
 print(df)
