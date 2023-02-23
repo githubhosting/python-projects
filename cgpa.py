@@ -27,19 +27,20 @@ with tab1:
 			each_sub_your_score.append(st.slider(f"{sub[i]} Your Score", 0, each_sub_max_score[i], step=1))
 	grades_scored = []
 	for i in range(len(each_sub_your_score)):
-		if each_sub_your_score[i] in range(0, bmhl[0]):
+		percent = each_sub_your_score[i] / each_sub_max_score[i] * 100
+		if percent in range(0, bmhl[0]):
 			grades_scored.append(1)
-		elif each_sub_your_score[i] in range(bmhl[0], bmhl[1]):
+		elif percent in range(bmhl[0], bmhl[1]):
 			grades_scored.append(2)
-		elif each_sub_your_score[i] in range(bmhl[1], bmhl[2]):
+		elif percent in range(bmhl[1], bmhl[2]):
 			grades_scored.append(3)
-		elif each_sub_your_score[i] in range(bmhl[2], bmhl[3]):
+		elif percent in range(bmhl[2], bmhl[3]):
 			grades_scored.append(4)
-		elif each_sub_your_score[i] in range(bmhl[3], bmhl[4]):
+		elif percent in range(bmhl[3], bmhl[4]):
 			grades_scored.append(5)
-		elif each_sub_your_score[i] in range(bmhl[4], bmhl[5]):
+		elif percent in range(bmhl[4], bmhl[5]):
 			grades_scored.append(6)
-		elif each_sub_your_score[i] in range(bmhl[5], bmhl[6]):
+		elif percent in range(bmhl[5], bmhl[6]):
 			grades_scored.append(7)
 		else:
 			grades_scored.append(0)
