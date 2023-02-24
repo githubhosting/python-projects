@@ -14,6 +14,8 @@ bmhl = [12, 13, 27, 37, 49, 57, 70]
 bmsl = [11, 12, 23, 38, 49, 60, 70]
 econhl = [14, 15, 29, 39, 51, 64, 74]
 
+
+
 with tab1:
 	st.subheader("Select your Subjects")
 	sub = st.multiselect("Multi Select subjects", subjects_sanju)
