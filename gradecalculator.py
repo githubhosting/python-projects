@@ -39,14 +39,14 @@ st.subheader("Enter your score for each subjects")
 choice = st.radio("Select the type of Entry", ["Text", "Slider", "Value"])
 
 
-def foo():
-	if len(st.session_state.marks) == 2:
-		st.session_state.marks = f'{st.session_state.marks}/'
+def foo(i):
+	if len(st.session_state[f"marks{i}"]) == 2:
+		st.session_state[f"marks{i}"] = f'{st.session_state[f"marks{i}"]}/'
 
 
 if choice == "Text":
 	for i in range(len(subject)):
-		marks_scored = st.text_input(f"{subject[i]} Score", key="marks", on_change=foo)
+		marks_scored = st.text_input(f"{subject[i]} Score", key=f"marks{i}", on_change=lambda _i=i: foo(_i))
 
 		if marks_scored:
 			marks_scored = marks_scored.split("/")
