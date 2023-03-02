@@ -9,3 +9,5 @@ usn.csv
 __pycache__
 
 
+.web
+pynecone.db

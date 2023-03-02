@@ -114,7 +114,7 @@ def foo(i):
 
 if choice == "Text":
 	for i in range(len(subject)):
-		marks_scored = st.text_input(f"{subject[i]} Score", key=f"marks{i}", on_change=lambda _i=i: foo(_i))
+		marks_scored = st.text_input(f"{subject[i]} Score", key=f"marks{i}", on_change=lambda _i=i: foo(_i), help="Enter your score in the format 'your_score/max_score' (e.g. 20/30)", placeholder="05/20" )
 
 		if marks_scored:
 			marks_scored = marks_scored.split("/")
