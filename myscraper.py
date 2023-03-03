@@ -12,7 +12,11 @@ with open('logs.txt', 'r') as f:
 		if "|" in line:
 			line = line.split("|")
 			time_line = line[1]
-			time_line = datetime.strptime(time_line, '%Y-%m-%d %H:%M:%S')
+			time_line= time_line.split(" ")
+			time_line = time_line[2]
+			# st.write(time_line)
+			time_line = datetime.strptime(time_line,'%H:%M:%S.%f')
+			time_line = time_line.strftime('%H:%M:%S')
 			time_frame.append(time_line)
 	df = pd.DataFrame(time_frame)
 	st.write(df)
